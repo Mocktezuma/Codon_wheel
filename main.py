@@ -27,7 +27,7 @@ def codoncheck(codonlist):
         elif codonlist[1] == "a":
             printResult("Tyrosine")
         elif codonlist[1] == "u":
-            if codonlist[2] == "a" or codonlist[2] == "g":
+            if codonlist[2] == "u" or codonlist[2] == "c":
                 printResult("Phenylalanine")
             else:
                 printResult("Leucine")
@@ -70,7 +70,7 @@ def codoncheck(codonlist):
         print("Error: please enter a valid codon")
 
 
-while codon != "exit":  # loops until the codon has 3 characters
+while codon != "exit":  # loops until the user enter exit to quit the program
     print("Please enter a codon with 3 letters: ")
     codon = input("> ")
     codonlist = list(codon)  # turn codon into a list
