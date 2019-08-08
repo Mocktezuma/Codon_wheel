@@ -17,7 +17,7 @@ def codoncheck(codonlist):
         elif codonlist[1] == "c":
             printResult("Alanine")
         else:
-            if codonlist[2] == "a" or "g":
+            if codonlist[2] == "a" or codonlist[2] == "g":
                 printResult("Glutamic acid")
             else:
                 printResult("Aspartic acid")
@@ -27,12 +27,12 @@ def codoncheck(codonlist):
         elif codonlist[1] == "a":
             printResult("Tyrosine")
         elif codonlist[1] == "u":
-            if codonlist[2] == "a" or "g":
+            if codonlist[2] == "a" or codonlist[2] == "g":
                 printResult("Phenylalanine")
             else:
                 printResult("Leucine")
         else:
-            if codonlist[2] == "u" or "c":
+            if codonlist[2] == "u" or codonlist[2] == "c":
                 printResult("Cysteine")
             else:
                 printResult("Tryptophan")
@@ -40,12 +40,12 @@ def codoncheck(codonlist):
         if codonlist[1] == "c":
             printResult("Threonine")
         elif codonlist[1] == "g":
-            if codonlist[2] == "g" or "a":
+            if codonlist[2] == "g" or codonlist[2] == "a":
                 printResult("Arginine")
             else:
                 printResult("Serine")
         elif codonlist[1] == "a":
-            if codonlist[2] == "g" or "a":
+            if codonlist[2] == "g" or codonlist[2] == "a":
                 printResult("Lysine")
             else:
                 printResult("Asparagine")
@@ -62,7 +62,7 @@ def codoncheck(codonlist):
         elif codonlist[1] == "g":
             printResult("Arginine")
         else:
-            if codonlist[2] == "u" or "c":
+            if codonlist[2] == "u" or codonlist[2] == "c":
                 printResult("Histidine")
             else:
                 printResult("Glutamine")
@@ -70,7 +70,7 @@ def codoncheck(codonlist):
         print("Error: please enter a valid codon")
 
 
-while len(codon) != 3 or codon != "exit":  # loops until the codon has 3 characters
+while codon != "exit":  # loops until the codon has 3 characters
     print("Please enter a codon with 3 letters: ")
     codon = input("> ")
     codonlist = list(codon)  # turn codon into a list
