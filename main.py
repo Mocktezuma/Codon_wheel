@@ -9,7 +9,7 @@ def printResult(result):  # define a function for printing the result based on a
 def codoncheck(codonlist):
     if codon in stop:
         printResult("stop")
-    elif codonlist[0] == "g":
+    elif codonlist[0] == "g":# evaluation for codon starting with g
         if codonlist[1] == "g":
             printResult("Glycine")
         elif codonlist[1] == "u":
@@ -21,7 +21,7 @@ def codoncheck(codonlist):
                 printResult("Glutamic acid")
             else:
                 printResult("Aspartic acid")
-    elif codonlist[0] == "u":
+    elif codonlist[0] == "u":# evaluation for codon starting with u
         if codonlist[1] == "c":
             printResult("Serine")
         elif codonlist[1] == "a":
@@ -36,7 +36,7 @@ def codoncheck(codonlist):
                 printResult("Cysteine")
             else:
                 printResult("Tryptophan")
-    elif codonlist[0] == "a":
+    elif codonlist[0] == "a":# evaluation for codon starting with a
         if codonlist[1] == "c":
             printResult("Threonine")
         elif codonlist[1] == "g":
@@ -54,7 +54,7 @@ def codoncheck(codonlist):
                 printResult("Methionine")
             else:
                 printResult("Isolleucine")
-    elif codonlist[0] == "c":
+    elif codonlist[0] == "c":# evaluation for codon starting with c
         if codonlist[1] == "u":
             printResult("Leucine")
         elif codonlist[1] == "c":
